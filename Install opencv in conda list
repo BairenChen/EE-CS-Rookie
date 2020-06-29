@@ -1,0 +1,25 @@
+I have installed and implemented Anaconda3 and PyCharm2019 in my PC. The environment configuration of PyCharm is based on the conda list in Anaconda3. 
+In order to learn image process, I WANT TO INSTALL OPENCV IN CONDA LIST BUT FAILED.
+Using
+conda install -chttps://conda.binstar.org/menpo opencv
+conda install -c menpo opencv
+conda install -c conda-forge opencv
+conda install -c conda-forge/label/broken opencv
+don't work.
+====================step1====================
+According to [https://blog.csdn.net/iracer/article/details/90746292], 
+I downloaded the .whl file (opencv_python-4.2.0.34-cp37-cp37m-win_amd64.whl) from [https://pypi.tuna.tsinghua.edu.cn/simple/opencv-python/].
+(Here's an another address of downloading opencv but the speed is too slow, https://pypi.tuna.tsinghua.edu.cn/simple/opencv-python/)
+I put the .whl file into Anaconda3 third-party package directory, ...\Anaconda3\Lib\site-packages. (My path: D:\Applications\Anaconda3\Lib\site-packages)
+====================step2====================
+Run cmd, and input cd /d D:\Applications\Anaconda3\Lib\site-packages
+(Reference of cd to the specified directory:
+https://blog.csdn.net/relijin/article/details/62416267 
+or
+https://blog.csdn.net/qq_32160853/article/details/81303127?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase)
+Input pip install opencv_python-4.2.0.34-cp37-cp37m-win_amd64.whl
+It worked!!!
+====================step3====================
+Check the environment configuration: 
+(1) Run Anaconda Prompt, input conda list, press enter and check whether opencv-python is in conda list;
+(2) Run Pycharm, File-Settings-Project-Project Intepreter, and search opencv-python package, normally the file should exist.
